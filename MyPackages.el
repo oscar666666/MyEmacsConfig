@@ -25,7 +25,7 @@
     emms  ;; Emacs Multimedia System
 
     spacemacs-theme ;;theme
-    
+
     magit                           ;; Git integration
 
     ;; flyspell requirement: apt install ispell
@@ -36,6 +36,14 @@
     neotree ;;A Emacs tree plugin
 
     use-package ;;The use-package macro allows you to isolate package configuration
+
+    projectile ;;Projectile is a project interaction library for Emacs
+
+    powerline ;; Emacs version of the Vim powerline.
+
+    moe-theme ;; theme
+
+    js2-mode ;;Improved JavaScript editing mode
     )
 
   )
@@ -49,5 +57,4 @@
 
 	    (package-install package)))
 
-            myPackages)
-
+	    myPackages)
