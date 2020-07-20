@@ -14,7 +14,16 @@
 (powerline-default-theme);; enable powerline
 (powerline-raw mode-line-mule-info nil 'l);;improve performance
 
+;; markdown-mode config
+(use-package markdown-mode
+  :ensure t
+  :mode (("README\\.md\\'" . gfm-mode)
+         ("\\.md\\'" . markdown-mode)
+         ("\\.markdown\\'" . markdown-mode))
+  :init (setq markdown-command "multimarkdown"))
+  
 ;;moe-theme
+(require 'moe-theme)
 (add-hook 'after-init-hook
 	    (lambda () (load-theme 'moe-dark t)))
 ;; Show highlighted buffer-id as decoration. (Default: nil)
@@ -25,12 +34,13 @@
 (setq moe-theme-resize-org-title '(1.5 1.4 1.3 1.2 1.1 1.0 1.0 1.0 1.0))
 (setq moe-theme-resize-rst-title '(1.5 1.4 1.3 1.2 1.1 1.0))
 
-;; Choose a color for mode-line.(Default: blue)
-(setq moe-theme-set-color 'cyan)
-
 ;; Finally, apply moe-theme now.
 ;; Choose what you like, (moe-light) or (moe-dark)
-;;(moe-light)
+(moe-dark)
+
+;; Choose a color for mode-line.(Default: blue)
+(moe-theme-set-color 'purple)
+
 
 ;;start beacon to highlight cursor
 ;;(require 'beacon)

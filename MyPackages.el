@@ -44,6 +44,8 @@
     moe-theme ;; theme
 
     js2-mode ;;Improved JavaScript editing mode
+	
+	markdown-mode ;;markdown-mode is a major mode for editing Markdown-formatted text. 
     )
 
   )
