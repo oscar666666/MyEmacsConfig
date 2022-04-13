@@ -39,8 +39,10 @@
 (moe-dark)
 
 ;; Choose a color for mode-line.(Default: blue)
-(moe-theme-set-color 'purple)
-
+(defvar moe-theme-set-color 'purple
+"Default is 'blue.
+If nil, no background color.
+Available choices: 'blue, 'cyan', 'green, 'magenta, 'red, 'orange, 'yellow, 'purple, 'b/w")
 
 ;;start beacon to highlight cursor
 ;;(require 'beacon)
